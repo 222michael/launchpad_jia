@@ -36,17 +36,34 @@ Jia is a web application built with Next.js that appears to provide interview as
 
 ## Getting Started
 
-### Setting Up Environment Variables
+### Quick Setup (Sprint Round)
 
-1. Copy the example environment file:
+**For the Sprint Round, use the provided Core API:**
+
+1. Create `.env.local` file:
 
 ```bash
-cp .env.example .env
+cp .env.example .env.local
 ```
 
-2. Fill in the required environment variables in `.env`:
+2. Add the following configuration:
 
+```env
+# Core API (Provided for Sprint Round)
+NEXT_PUBLIC_CORE_API_URL=https://jia-jvx-1a0eba0de6dd.herokuapp.com
+
+# Required for build (placeholder values)
+MONGODB_URI=mongodb://localhost:27017/jia-placeholder
+OPENAI_API_KEY=sk-placeholder-key-using-core-api
 ```
+
+**📖 For detailed setup instructions, see [SETUP.md](./SETUP.md)**
+
+### Full Setup (Optional)
+
+If you want to use your own services:
+
+```env
 # OpenAI
 OPENAI_API_KEY=your_openai_api_key
 
@@ -55,6 +72,13 @@ MONGODB_URI=your_mongodb_connection_string
 
 # Firebase
 FIREBASE_SERVICE_ACCOUNT=your_firebase_service_account_json
+NEXT_PUBLIC_FIREBASE_API_KEY=your_api_key
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_auth_domain
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your_storage_bucket
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+NEXT_PUBLIC_FIREBASE_APP_ID=your_app_id
+NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID=your_measurement_id
 
 # App Configuration
 NEXT_PUBLIC_CORE_API_URL=your_backend_api_url
